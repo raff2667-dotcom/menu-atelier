@@ -29,7 +29,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen bg-white pt-32 pb-20 px-6">
+    <section className="min-h-screen pt-32 pb-20 px-6" style={{ backgroundColor: "#fffbf5" }}>
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div
@@ -40,15 +40,17 @@ export default function Hero() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground"
+            className="text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
+            style={{ color: "#1e3a7f" }}
           >
             Il tuo menù,{" "}
-            <span className="text-amber-700">progettato come un'esperienza</span>
+            <span style={{ color: "#1e3a7f" }}>progettato come un'esperienza</span>
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg text-gray-600 leading-relaxed max-w-xl font-light"
+            className="text-lg leading-relaxed max-w-xl font-light"
+            style={{ color: "#6b7280" }}
           >
             Non realizziamo semplici menù digitali. Progettiamo strumenti di
             vendita che valorizzano il tuo locale, migliorano l'esperienza dei
@@ -61,9 +63,12 @@ export default function Hero() {
           >
             <motion.button
               onClick={() => setIsModalOpen(true)}
-              whileHover={{ scale: 1.02, boxShadow: "0 12px 20px -5px rgba(0,0,0,0.1)" }}
+              whileHover={{ scale: 1.02, boxShadow: "0 12px 20px -5px rgba(30, 58, 127, 0.15)" }}
               whileTap={{ scale: 0.98 }}
-              className="bg-amber-800 text-white px-8 py-3.5 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-amber-900 transition-colors"
+              className="text-white px-8 py-3.5 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors"
+              style={{ backgroundColor: "#1e3a7f" }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#2e5090"}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#1e3a7f"}
             >
               Richiedi una consulenza gratuita
               <FaArrowRight size={18} />
@@ -71,7 +76,16 @@ export default function Hero() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="border-2 border-amber-800 text-amber-800 px-8 py-3.5 rounded-lg font-medium hover:bg-amber-800 hover:text-white transition-colors"
+              className="border-2 px-8 py-3.5 rounded-lg font-medium transition-colors"
+              style={{ borderColor: "#1e3a7f", color: "#1e3a7f" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#1e3a7f";
+                e.currentTarget.style.color = "white";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "transparent";
+                e.currentTarget.style.color = "#1e3a7f";
+              }}
             >
               Guarda un esempio
             </motion.button>

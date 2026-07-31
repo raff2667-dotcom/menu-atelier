@@ -37,7 +37,7 @@ export default function Consultation() {
   };
 
   return (
-    <section className="py-24 px-6 bg-gray-50">
+    <section className="py-24 px-6" style={{ backgroundColor: "#f9f7f4" }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
@@ -46,10 +46,10 @@ export default function Consultation() {
           variants={containerVariants}
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 tracking-tight">
+            <h2 className="text-5xl font-bold mb-6 tracking-tight" style={{ color: "#1e3a7f" }}>
               La prima consulenza è completamente gratuita.
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl leading-relaxed" style={{ color: "#6b7280" }}>
               Prima di iniziare vogliamo conoscere il tuo locale. Un nostro
               operatore ti contatterà telefonicamente per comprendere:
             </p>
@@ -57,16 +57,18 @@ export default function Consultation() {
 
           <motion.div
             variants={itemVariants}
-            className="bg-white rounded-2xl p-8 md:p-12 mb-12 border border-gray-100"
+            className="rounded-2xl p-8 md:p-12 mb-12 border"
+            style={{ backgroundColor: "#fffbf5", borderColor: "#e5e1d9" }}
           >
             <ul className="space-y-4">
               {points.map((point, index) => (
                 <motion.li
                   key={index}
                   variants={itemVariants}
-                  className="flex items-center text-lg text-gray-700"
+                  className="flex items-center text-lg"
+                  style={{ color: "#6b7280" }}
                 >
-                  <span className="w-2 h-2 bg-amber-600 rounded-full mr-4" />
+                  <span className="w-2 h-2 rounded-full mr-4" style={{ backgroundColor: "#1e3a7f" }} />
                   {point}
                 </motion.li>
               ))}
@@ -78,13 +80,13 @@ export default function Consultation() {
             className="text-center space-y-6 mb-12"
           >
             <div className="space-y-2">
-              <p className="text-gray-600 text-lg">
+              <p className="text-lg" style={{ color: "#6b7280" }}>
                 <strong>Nessun impegno.</strong>
               </p>
-              <p className="text-gray-600 text-lg">
+              <p className="text-lg" style={{ color: "#6b7280" }}>
                 <strong>Nessun costo.</strong>
               </p>
-              <p className="text-gray-600 text-lg">
+              <p className="text-lg" style={{ color: "#6b7280" }}>
                 <strong>Solo una consulenza professionale.</strong>
               </p>
             </div>
@@ -96,9 +98,12 @@ export default function Consultation() {
           >
             <motion.button
               onClick={() => setIsModalOpen(true)}
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0,0,0,0.15)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(30, 58, 127, 0.15)" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-black text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-900 transition-colors text-lg"
+              className="text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors text-lg"
+              style={{ backgroundColor: "#1e3a7f" }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#2e5090"}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#1e3a7f"}
             >
               Prenota la consulenza gratuita
               <FaArrowRight size={20} />

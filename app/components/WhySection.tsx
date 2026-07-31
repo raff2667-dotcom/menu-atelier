@@ -24,7 +24,7 @@ export default function WhySection() {
   };
 
   return (
-    <section id="perche" className="py-20 px-6 bg-white">
+    <section id="perche" className="py-20 px-6" style={{ backgroundColor: "#fffbf5" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -36,12 +36,14 @@ export default function WhySection() {
           <motion.h2
             variants={itemVariants}
             className="text-5xl font-bold mb-6 tracking-tight"
+            style={{ color: "#1e3a7f" }}
           >
             Ogni menù racconta una storia.
           </motion.h2>
           <motion.div
             variants={itemVariants}
-            className="max-w-3xl space-y-4 text-gray-600 text-lg leading-relaxed"
+            className="max-w-3xl space-y-4 text-lg leading-relaxed"
+            style={{ color: "#6b7280" }}
           >
             <p>
               Un buon menù non serve soltanto a mostrare i piatti.

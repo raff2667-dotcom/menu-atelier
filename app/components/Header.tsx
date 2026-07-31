@@ -20,9 +20,12 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-sm" : "bg-white/80 backdrop-blur-sm"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={{
+        backgroundColor: isScrolled ? "#fffbf5" : "rgba(255, 251, 245, 0.8)",
+        backdropFilter: isScrolled ? "none" : "blur(10px)",
+        boxShadow: isScrolled ? "0 1px 3px rgba(0,0,0,0.05)" : "none"
+      }}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <motion.div
@@ -31,17 +34,20 @@ export default function Header() {
           transition={{ duration: 0.5 }}
           className="text-2xl font-bold tracking-tight"
         >
-          <span className="text-foreground">Menù</span>
-          <span className="text-amber-700"> Atelier</span>
+          <span style={{ color: "#1e3a7f" }}>Menù</span>
+          <span style={{ color: "#1e3a7f" }}> Atelier</span>
         </motion.div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <ul className="flex gap-8 text-sm font-medium text-gray-700">
+          <ul className="flex gap-8 text-sm font-medium" style={{ color: "#6b7280" }}>
             <li>
               <Link
                 href="#perche"
-                className="hover:text-black transition-colors"
+                className="transition-colors"
+                style={{ color: "#6b7280" }}
+                onMouseEnter={(e) => e.currentTarget.style.color = "#1e3a7f"}
+                onMouseLeave={(e) => e.currentTarget.style.color = "#6b7280"}
               >
                 Perché noi
               </Link>
@@ -49,13 +55,22 @@ export default function Header() {
             <li>
               <Link
                 href="#come"
-                className="hover:text-black transition-colors"
+                className="transition-colors"
+                style={{ color: "#6b7280" }}
+                onMouseEnter={(e) => e.currentTarget.style.color = "#1e3a7f"}
+                onMouseLeave={(e) => e.currentTarget.style.color = "#6b7280"}
               >
                 Come lavoriamo
               </Link>
             </li>
             <li>
-              <Link href="#faq" className="hover:text-black transition-colors">
+              <Link
+                href="#faq"
+                className="transition-colors"
+                style={{ color: "#6b7280" }}
+                onMouseEnter={(e) => e.currentTarget.style.color = "#1e3a7f"}
+                onMouseLeave={(e) => e.currentTarget.style.color = "#6b7280"}
+              >
                 FAQ
               </Link>
             </li>
@@ -65,14 +80,18 @@ export default function Header() {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="hidden md:block bg-amber-800 text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-amber-900 transition-colors"
+          className="hidden md:block text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors"
+          style={{ backgroundColor: "#1e3a7f" }}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#2e5090"}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#1e3a7f"}
         >
           Consulenza gratuita
         </motion.button>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-black"
+          className="md:hidden"
+          style={{ color: "#1e3a7f" }}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <FaXmark size={24} /> : <FaBars size={24} />}
@@ -85,31 +104,46 @@ export default function Header() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-white border-t border-gray-100"
+          className="md:hidden border-t"
+          style={{ backgroundColor: "#fffbf5", borderColor: "#e5e1d9" }}
         >
           <div className="px-6 py-4 space-y-4">
             <Link
               href="#perche"
-              className="block text-sm font-medium text-gray-700 hover:text-black"
+              className="block text-sm font-medium transition-colors"
+              style={{ color: "#6b7280" }}
               onClick={() => setIsOpen(false)}
+              onMouseEnter={(e) => e.currentTarget.style.color = "#1e3a7f"}
+              onMouseLeave={(e) => e.currentTarget.style.color = "#6b7280"}
             >
               Perché noi
             </Link>
             <Link
               href="#come"
-              className="block text-sm font-medium text-gray-700 hover:text-black"
+              className="block text-sm font-medium transition-colors"
+              style={{ color: "#6b7280" }}
               onClick={() => setIsOpen(false)}
+              onMouseEnter={(e) => e.currentTarget.style.color = "#1e3a7f"}
+              onMouseLeave={(e) => e.currentTarget.style.color = "#6b7280"}
             >
               Come lavoriamo
             </Link>
             <Link
               href="#faq"
-              className="block text-sm font-medium text-gray-700 hover:text-black"
+              className="block text-sm font-medium transition-colors"
+              style={{ color: "#6b7280" }}
               onClick={() => setIsOpen(false)}
+              onMouseEnter={(e) => e.currentTarget.style.color = "#1e3a7f"}
+              onMouseLeave={(e) => e.currentTarget.style.color = "#6b7280"}
             >
               FAQ
             </Link>
-            <button className="w-full bg-amber-800 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-amber-900">
+            <button
+              className="w-full text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+              style={{ backgroundColor: "#1e3a7f" }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#2e5090"}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#1e3a7f"}
+            >
               Consulenza gratuita
             </button>
           </div>

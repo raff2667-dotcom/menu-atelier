@@ -67,7 +67,7 @@ export default function Features() {
   };
 
   return (
-    <section className="py-24 px-6 bg-white">
+    <section className="py-24 px-6" style={{ backgroundColor: "#fffbf5" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -78,6 +78,7 @@ export default function Features() {
           <motion.h2
             variants={itemVariants}
             className="text-5xl font-bold mb-16 tracking-tight"
+            style={{ color: "#1e3a7f" }}
           >
             Perché scegliere noi
           </motion.h2>
@@ -92,14 +93,14 @@ export default function Features() {
                   whileHover={{ y: -4 }}
                   className="group cursor-pointer"
                 >
-                  <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-100 hover:border-amber-700 hover:shadow-xl transition-all duration-300 h-full">
-                    <div className="w-14 h-14 bg-amber-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-700 transition-colors duration-300">
-                      <Icon className="text-white text-2xl" />
+                  <div className="rounded-xl p-8 border hover:shadow-xl transition-all duration-300 h-full" style={{ backgroundColor: "#f9f7f4", borderColor: "#e5e1d9" }} onMouseEnter={(e) => e.currentTarget.style.borderColor = "#1e3a7f"} onMouseLeave={(e) => e.currentTarget.style.borderColor = "#e5e1d9"}>
+                    <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-6 transition-colors duration-300 text-white" style={{ backgroundColor: "#1e3a7f" }}>
+                      <Icon className="text-2xl" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 text-black">
+                    <h3 className="text-xl font-semibold mb-3" style={{ color: "#1e3a7f" }}>
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="leading-relaxed" style={{ color: "#6b7280" }}>
                       {feature.description}
                     </p>
                   </div>

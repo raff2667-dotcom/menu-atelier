@@ -2,16 +2,17 @@
 
 @import "tailwindcss";
 
+/* PALETTE: Navy Professional (Blu navy su bianco panna) */
 :root {
-  --background: #fafaf8;
-  --foreground: #1a1a1a;
-  --gray-50: #f8f8f6;
-  --gray-100: #f0f0ed;
-  --gray-200: #e5e5e0;
-  --gray-400: #a9a8a3;
-  --gray-600: #6b6b66;
-  --accent-primary: #8b7a5e;
-  --accent-light: #a8987a;
+  --background: #fffbf5;
+  --foreground: #1e3a7f;
+  --gray-50: #f9f7f4;
+  --gray-100: #f3f0eb;
+  --gray-200: #e5e1d9;
+  --gray-400: #9ca3af;
+  --gray-600: #6b7280;
+  --accent-primary: #1e3a7f;
+  --accent-light: #2e5090;
 }
 
 @theme inline {

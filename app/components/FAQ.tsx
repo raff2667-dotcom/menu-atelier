@@ -56,7 +56,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-24 px-6 bg-white">
+    <section id="faq" className="py-24 px-6" style={{ backgroundColor: "#fffbf5" }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
@@ -67,6 +67,7 @@ export default function FAQ() {
           <motion.h2
             variants={itemVariants}
             className="text-5xl font-bold mb-16 tracking-tight"
+            style={{ color: "#1e3a7f" }}
           >
             Domande frequenti
           </motion.h2>
@@ -76,13 +77,17 @@ export default function FAQ() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="border border-gray-200 rounded-lg overflow-hidden hover:border-amber-600 transition-colors duration-300"
+                className="rounded-lg overflow-hidden transition-colors duration-300"
+                style={{ border: `1px solid ${openIndex === index ? "#1e3a7f" : "#e5e1d9"}` }}
+                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#1e3a7f"}
+                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#e5e1d9"}
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
-                  className="w-full px-8 py-5 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors duration-300 text-left"
+                  className="w-full px-8 py-5 flex items-center justify-between transition-colors duration-300 text-left"
+                  style={{ backgroundColor: "#f9f7f4" }}
                 >
-                  <h3 className="font-semibold text-lg text-black">
+                  <h3 className="font-semibold text-lg" style={{ color: "#1e3a7f" }}>
                     {faq.question}
                   </h3>
                   <motion.div
@@ -90,7 +95,7 @@ export default function FAQ() {
                     transition={{ duration: 0.3 }}
                     className="flex-shrink-0 ml-4"
                   >
-                    <FaPlus className="text-amber-600" size={24} />
+                    <FaPlus size={24} style={{ color: "#1e3a7f" }} />
                   </motion.div>
                 </button>
 
@@ -101,9 +106,10 @@ export default function FAQ() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="px-8 py-5 bg-white border-t border-gray-100"
+                      className="px-8 py-5 border-t"
+                      style={{ backgroundColor: "#fffbf5", borderColor: "#e5e1d9" }}
                     >
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="leading-relaxed" style={{ color: "#6b7280" }}>
                         {faq.answer}
                       </p>
                     </motion.div>

@@ -29,7 +29,7 @@ export default function FinalCTA() {
   };
 
   return (
-    <section className="py-32 px-6 bg-black text-white">
+    <section className="py-32 px-6 text-white" style={{ backgroundColor: "#1e3a7f" }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
@@ -47,7 +47,8 @@ export default function FinalCTA() {
 
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-300 mb-12 leading-relaxed max-w-2xl mx-auto"
+            className="text-xl mb-12 leading-relaxed max-w-2xl mx-auto"
+            style={{ color: "#d1dce8" }}
           >
             Ogni progetto nasce da un confronto diretto con il cliente. Prenota
             gratuitamente una telefonata con il nostro team e scopri come
@@ -57,9 +58,12 @@ export default function FinalCTA() {
           <motion.button
             onClick={() => setIsModalOpen(true)}
             variants={itemVariants}
-            whileHover={{ scale: 1.02, boxShadow: "0 20px 40px -10px rgba(180, 140, 80, 0.3)" }}
+            whileHover={{ scale: 1.02, boxShadow: "0 20px 40px -10px rgba(255, 255, 255, 0.2)" }}
             whileTap={{ scale: 0.95 }}
-            className="bg-amber-800 hover:bg-amber-900 text-white px-10 py-4 rounded-lg font-medium flex items-center justify-center gap-3 mx-auto transition-all duration-300 text-lg"
+            className="text-white px-10 py-4 rounded-lg font-medium flex items-center justify-center gap-3 mx-auto transition-all duration-300 text-lg"
+            style={{ backgroundColor: "rgba(255, 255, 255, 0.15)" }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.25)"}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.15)"}
           >
             Prenota la consulenza gratuita
             <FaArrowRight size={22} />
@@ -67,7 +71,8 @@ export default function FinalCTA() {
 
           <motion.p
             variants={itemVariants}
-            className="text-gray-400 text-sm mt-8"
+            className="text-sm mt-8"
+            style={{ color: "#a5b4d1" }}
           >
             Nessun impegno • Nessun costo • Consulenza professionale
           </motion.p>

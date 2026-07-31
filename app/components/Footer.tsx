@@ -28,7 +28,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white py-16 px-6">
+    <footer className="text-white py-16 px-6" style={{ backgroundColor: "#1e3a7f" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -42,9 +42,9 @@ export default function Footer() {
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold mb-2">
                 <span className="text-white">Menù</span>
-                <span className="text-amber-400"> Atelier</span>
+                <span style={{ color: "#d1dce8" }}> Atelier</span>
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-sm" style={{ color: "#a5b4d1" }}>
                 Progettiamo menù digitali che valorizzano il tuo locale.
               </p>
             </motion.div>
@@ -52,19 +52,19 @@ export default function Footer() {
             {/* Links 1 */}
             <motion.div variants={itemVariants}>
               <h4 className="font-semibold mb-4 text-white">Azienda</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm" style={{ color: "#a5b4d1" }}>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="transition-colors" style={{ color: "#a5b4d1" }} onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"} onMouseLeave={(e) => e.currentTarget.style.color = "#a5b4d1"}>
                     Chi siamo
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="transition-colors" style={{ color: "#a5b4d1" }} onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"} onMouseLeave={(e) => e.currentTarget.style.color = "#a5b4d1"}>
                     Servizi
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="transition-colors" style={{ color: "#a5b4d1" }} onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"} onMouseLeave={(e) => e.currentTarget.style.color = "#a5b4d1"}>
                     Contatti
                   </Link>
                 </li>
@@ -74,19 +74,19 @@ export default function Footer() {
             {/* Links 2 */}
             <motion.div variants={itemVariants}>
               <h4 className="font-semibold mb-4 text-white">Risorse</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm" style={{ color: "#a5b4d1" }}>
                 <li>
-                  <Link href="#faq" className="hover:text-white transition-colors">
+                  <Link href="#faq" className="transition-colors" style={{ color: "#a5b4d1" }} onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"} onMouseLeave={(e) => e.currentTarget.style.color = "#a5b4d1"}>
                     FAQ
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="transition-colors" style={{ color: "#a5b4d1" }} onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"} onMouseLeave={(e) => e.currentTarget.style.color = "#a5b4d1"}>
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="transition-colors" style={{ color: "#a5b4d1" }} onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"} onMouseLeave={(e) => e.currentTarget.style.color = "#a5b4d1"}>
                     Termini di servizio
                   </Link>
                 </li>
@@ -99,21 +99,30 @@ export default function Footer() {
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-amber-600 transition-colors"
+                  className="transition-colors"
+                  style={{ color: "#a5b4d1" }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"}
+                  onMouseLeave={(e) => e.currentTarget.style.color = "#a5b4d1"}
                   aria-label="Instagram"
                 >
                   <FaInstagram size={20} />
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-amber-600 transition-colors"
+                  className="transition-colors"
+                  style={{ color: "#a5b4d1" }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"}
+                  onMouseLeave={(e) => e.currentTarget.style.color = "#a5b4d1"}
                   aria-label="Facebook"
                 >
                   <FaFacebook size={20} />
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-amber-600 transition-colors"
+                  className="transition-colors"
+                  style={{ color: "#a5b4d1" }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"}
+                  onMouseLeave={(e) => e.currentTarget.style.color = "#a5b4d1"}
                   aria-label="LinkedIn"
                 >
                   <FaLinkedin size={20} />
@@ -125,9 +134,10 @@ export default function Footer() {
           {/* Divider */}
           <motion.div
             variants={itemVariants}
-            className="border-t border-gray-800 pt-8"
+            className="border-t pt-8"
+            style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}
           >
-            <p className="text-center text-sm text-gray-400">
+            <p className="text-center text-sm" style={{ color: "#a5b4d1" }}>
               © {currentYear} Menù Atelier. Tutti i diritti riservati.
             </p>
           </motion.div>
