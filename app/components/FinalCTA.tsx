@@ -1,9 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
+import ConsultationModal from "./ConsultationModal";
 
 export default function FinalCTA() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -51,6 +55,7 @@ export default function FinalCTA() {
           </motion.p>
 
           <motion.button
+            onClick={() => setIsModalOpen(true)}
             variants={itemVariants}
             whileHover={{ scale: 1.05, boxShadow: "0 25px 50px -12px rgba(201, 169, 97, 0.4)" }}
             whileTap={{ scale: 0.95 }}
@@ -67,6 +72,11 @@ export default function FinalCTA() {
             Nessun impegno • Nessun costo • Consulenza professionale
           </motion.p>
         </motion.div>
+
+        <ConsultationModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </div>
     </section>
   );

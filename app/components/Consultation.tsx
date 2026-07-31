@@ -1,9 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
+import ConsultationModal from "./ConsultationModal";
 
 export default function Consultation() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const points = [
     "il tipo di attività",
     "il tuo stile",
@@ -91,6 +95,7 @@ export default function Consultation() {
             className="flex justify-center"
           >
             <motion.button
+              onClick={() => setIsModalOpen(true)}
               whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0,0,0,0.15)" }}
               whileTap={{ scale: 0.95 }}
               className="bg-black text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-900 transition-colors text-lg"
@@ -101,6 +106,11 @@ export default function Consultation() {
           </motion.div>
         </motion.div>
       </div>
+
+      <ConsultationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 }
