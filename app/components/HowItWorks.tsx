@@ -69,7 +69,7 @@ export default function HowItWorks() {
   };
 
   return (
-    <section id="come" className="py-24 px-6" style={{ backgroundColor: "#f9f7f4" }}>
+    <section id="come" className="py-24 px-6" style={{ backgroundColor: "#ede8df" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -79,7 +79,8 @@ export default function HowItWorks() {
         >
           <motion.div variants={itemVariants} className="mb-16">
             <h2 className="text-5xl font-bold mb-4 tracking-tight" style={{ color: "#1e3a7f" }}>
-              Come lavoriamo
+              <span style={{ color: "#1e3a7f" }}>Come</span>{" "}
+              <span style={{ color: "#4b5563" }}>lavoriamo</span>
             </h2>
             <p className="text-xl" style={{ color: "#6b7280" }}>
               Creare il tuo menù è semplice.

@@ -29,7 +29,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen pt-32 pb-20 px-6" style={{ backgroundColor: "#fffbf5" }}>
+    <section className="min-h-screen pt-32 pb-20 px-6" style={{ backgroundColor: "#f0e6db" }}>
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div
@@ -41,9 +41,8 @@ export default function Hero() {
           <motion.h1
             variants={itemVariants}
             className="text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
-            style={{ color: "#1e3a7f" }}
           >
-            Il tuo menù,{" "}
+            <span style={{ color: "#4b5563" }}>Il tuo menù,</span>{" "}
             <span style={{ color: "#1e3a7f" }}>progettato come un'esperienza</span>
           </motion.h1>
 
@@ -65,10 +64,14 @@ export default function Hero() {
               onClick={() => setIsModalOpen(true)}
               whileHover={{ scale: 1.02, boxShadow: "0 12px 20px -5px rgba(30, 58, 127, 0.15)" }}
               whileTap={{ scale: 0.98 }}
-              className="text-white px-8 py-3.5 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors"
-              style={{ backgroundColor: "#1e3a7f" }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#2e5090"}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#1e3a7f"}
+              className="px-8 py-3.5 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors border-2"
+              style={{
+                backgroundColor: "#d1d5db",
+                color: "#1e3a7f",
+                borderColor: "#1e3a7f"
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#c4c9d4"}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#d1d5db"}
             >
               Richiedi una consulenza gratuita
               <FaArrowRight size={18} />
@@ -77,7 +80,11 @@ export default function Hero() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="border-2 px-8 py-3.5 rounded-lg font-medium transition-colors"
-              style={{ borderColor: "#1e3a7f", color: "#1e3a7f" }}
+              style={{
+                borderColor: "#1e3a7f",
+                color: "#1e3a7f",
+                backgroundColor: "transparent"
+              }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = "#1e3a7f";
                 e.currentTarget.style.color = "white";

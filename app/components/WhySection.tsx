@@ -24,7 +24,7 @@ export default function WhySection() {
   };
 
   return (
-    <section id="perche" className="py-20 px-6" style={{ backgroundColor: "#fffbf5" }}>
+    <section id="perche" className="py-20 px-6" style={{ backgroundColor: "#f0e6db" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -36,9 +36,9 @@ export default function WhySection() {
           <motion.h2
             variants={itemVariants}
             className="text-5xl font-bold mb-6 tracking-tight"
-            style={{ color: "#1e3a7f" }}
           >
-            Ogni menù racconta una storia.
+            <span style={{ color: "#1e3a7f" }}>Ogni menù</span>{" "}
+            <span style={{ color: "#4b5563" }}>racconta una storia.</span>
           </motion.h2>
           <motion.div
             variants={itemVariants}

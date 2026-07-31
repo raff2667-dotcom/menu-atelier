@@ -37,7 +37,7 @@ export default function ConsultationModal({
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3 }}
             className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md mx-4 rounded-2xl shadow-2xl z-50 p-8"
-            style={{ backgroundColor: "#fffbf5" }}
+            style={{ backgroundColor: "#f0e6db" }}
           >
             {/* Close Button */}
             <button

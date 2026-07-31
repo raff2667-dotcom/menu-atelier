@@ -42,7 +42,8 @@ export default function FinalCTA() {
             variants={itemVariants}
             className="text-5xl lg:text-6xl font-bold mb-6 leading-tight"
           >
-            Inizia oggi a progettare il menù perfetto.
+            <span>Inizia oggi a</span>{" "}
+            <span style={{ color: "#d1d5db" }}>progettare il menù perfetto.</span>
           </motion.h2>
 
           <motion.p
@@ -58,12 +59,16 @@ export default function FinalCTA() {
           <motion.button
             onClick={() => setIsModalOpen(true)}
             variants={itemVariants}
-            whileHover={{ scale: 1.02, boxShadow: "0 20px 40px -10px rgba(255, 255, 255, 0.2)" }}
+            whileHover={{ scale: 1.02, boxShadow: "0 20px 40px -10px rgba(209, 213, 219, 0.3)" }}
             whileTap={{ scale: 0.95 }}
-            className="text-white px-10 py-4 rounded-lg font-medium flex items-center justify-center gap-3 mx-auto transition-all duration-300 text-lg"
-            style={{ backgroundColor: "rgba(255, 255, 255, 0.15)" }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.25)"}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.15)"}
+            className="px-10 py-4 rounded-lg font-medium flex items-center justify-center gap-3 mx-auto transition-all duration-300 text-lg border-2"
+            style={{
+              backgroundColor: "#d1d5db",
+              color: "#1e3a7f",
+              borderColor: "#d1d5db"
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#c4c9d4"}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#d1d5db"}
           >
             Prenota la consulenza gratuita
             <FaArrowRight size={22} />

@@ -56,7 +56,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-24 px-6" style={{ backgroundColor: "#fffbf5" }}>
+    <section id="faq" className="py-24 px-6" style={{ backgroundColor: "#f0e6db" }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
@@ -67,9 +67,9 @@ export default function FAQ() {
           <motion.h2
             variants={itemVariants}
             className="text-5xl font-bold mb-16 tracking-tight"
-            style={{ color: "#1e3a7f" }}
           >
-            Domande frequenti
+            <span style={{ color: "#1e3a7f" }}>Domande</span>{" "}
+            <span style={{ color: "#4b5563" }}>frequenti</span>
           </motion.h2>
 
           <div className="space-y-4">

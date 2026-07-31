@@ -67,7 +67,7 @@ export default function Features() {
   };
 
   return (
-    <section className="py-24 px-6" style={{ backgroundColor: "#fffbf5" }}>
+    <section className="py-24 px-6" style={{ backgroundColor: "#f0e6db" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -78,9 +78,9 @@ export default function Features() {
           <motion.h2
             variants={itemVariants}
             className="text-5xl font-bold mb-16 tracking-tight"
-            style={{ color: "#1e3a7f" }}
           >
-            Perché scegliere noi
+            <span style={{ color: "#1e3a7f" }}>Perché</span>{" "}
+            <span style={{ color: "#4b5563" }}>scegliere noi</span>
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

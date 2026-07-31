@@ -2,15 +2,17 @@
 
 @import "tailwindcss";
 
-/* PALETTE: Navy Professional (Blu navy su bianco panna) */
+/* PALETTE: Navy Professional Enhanced (Blu navy + Grigio scuro su bianco panna scuro) */
 :root {
-  --background: #fffbf5;
+  --background: #f0e6db;
   --foreground: #1e3a7f;
-  --gray-50: #f9f7f4;
-  --gray-100: #f3f0eb;
+  --gray-50: #f5ede4;
+  --gray-100: #ede8df;
   --gray-200: #e5e1d9;
+  --gray-dark: #4b5563;
   --gray-400: #9ca3af;
   --gray-600: #6b7280;
+  --button-gray: #d1d5db;
   --accent-primary: #1e3a7f;
   --accent-light: #2e5090;
 }

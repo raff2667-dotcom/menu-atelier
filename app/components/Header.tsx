@@ -22,7 +22,7 @@ export default function Header() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        backgroundColor: isScrolled ? "#fffbf5" : "rgba(255, 251, 245, 0.8)",
+        backgroundColor: isScrolled ? "#f0e6db" : "rgba(240, 230, 219, 0.8)",
         backdropFilter: isScrolled ? "none" : "blur(10px)",
         boxShadow: isScrolled ? "0 1px 3px rgba(0,0,0,0.05)" : "none"
       }}
@@ -35,7 +35,7 @@ export default function Header() {
           className="text-2xl font-bold tracking-tight"
         >
           <span style={{ color: "#1e3a7f" }}>Menù</span>
-          <span style={{ color: "#1e3a7f" }}> Atelier</span>
+          <span style={{ color: "#4b5563" }}> Atelier</span>
         </motion.div>
 
         {/* Desktop Navigation */}
@@ -80,10 +80,18 @@ export default function Header() {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="hidden md:block text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors"
-          style={{ backgroundColor: "#1e3a7f" }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#2e5090"}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#1e3a7f"}
+          className="hidden md:block px-6 py-2.5 rounded-lg text-sm font-medium transition-colors border-2"
+          style={{
+            backgroundColor: "#d1d5db",
+            color: "#1e3a7f",
+            borderColor: "#1e3a7f"
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "#c4c9d4";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "#d1d5db";
+          }}
         >
           Consulenza gratuita
         </motion.button>
@@ -105,7 +113,7 @@ export default function Header() {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           className="md:hidden border-t"
-          style={{ backgroundColor: "#fffbf5", borderColor: "#e5e1d9" }}
+          style={{ backgroundColor: "#f0e6db", borderColor: "#e5e1d9" }}
         >
           <div className="px-6 py-4 space-y-4">
             <Link
@@ -139,10 +147,14 @@ export default function Header() {
               FAQ
             </Link>
             <button
-              className="w-full text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-              style={{ backgroundColor: "#1e3a7f" }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#2e5090"}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#1e3a7f"}
+              className="w-full px-4 py-2 rounded-lg text-sm font-medium transition-colors border-2"
+              style={{
+                backgroundColor: "#d1d5db",
+                color: "#1e3a7f",
+                borderColor: "#1e3a7f"
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#c4c9d4"}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#d1d5db"}
             >
               Consulenza gratuita
             </button>

@@ -37,7 +37,7 @@ export default function Consultation() {
   };
 
   return (
-    <section className="py-24 px-6" style={{ backgroundColor: "#f9f7f4" }}>
+    <section className="py-24 px-6" style={{ backgroundColor: "#ede8df" }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
@@ -46,8 +46,9 @@ export default function Consultation() {
           variants={containerVariants}
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 tracking-tight" style={{ color: "#1e3a7f" }}>
-              La prima consulenza è completamente gratuita.
+            <h2 className="text-5xl font-bold mb-6 tracking-tight">
+              <span style={{ color: "#1e3a7f" }}>La prima consulenza</span>{" "}
+              <span style={{ color: "#4b5563" }}>è completamente gratuita.</span>
             </h2>
             <p className="text-xl leading-relaxed" style={{ color: "#6b7280" }}>
               Prima di iniziare vogliamo conoscere il tuo locale. Un nostro
@@ -100,10 +101,14 @@ export default function Consultation() {
               onClick={() => setIsModalOpen(true)}
               whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(30, 58, 127, 0.15)" }}
               whileTap={{ scale: 0.95 }}
-              className="text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors text-lg"
-              style={{ backgroundColor: "#1e3a7f" }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#2e5090"}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#1e3a7f"}
+              className="px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors text-lg border-2"
+              style={{
+                backgroundColor: "#d1d5db",
+                color: "#1e3a7f",
+                borderColor: "#1e3a7f"
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#c4c9d4"}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#d1d5db"}
             >
               Prenota la consulenza gratuita
               <FaArrowRight size={20} />
