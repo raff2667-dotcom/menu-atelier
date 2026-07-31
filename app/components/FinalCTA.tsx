@@ -57,9 +57,9 @@ export default function FinalCTA() {
           <motion.button
             onClick={() => setIsModalOpen(true)}
             variants={itemVariants}
-            whileHover={{ scale: 1.05, boxShadow: "0 25px 50px -12px rgba(201, 169, 97, 0.4)" }}
+            whileHover={{ scale: 1.02, boxShadow: "0 20px 40px -10px rgba(180, 140, 80, 0.3)" }}
             whileTap={{ scale: 0.95 }}
-            className="bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 rounded-lg font-semibold flex items-center justify-center gap-3 mx-auto transition-all duration-300 text-lg"
+            className="bg-amber-800 hover:bg-amber-900 text-white px-10 py-4 rounded-lg font-medium flex items-center justify-center gap-3 mx-auto transition-all duration-300 text-lg"
           >
             Prenota la consulenza gratuita
             <FaArrowRight size={22} />

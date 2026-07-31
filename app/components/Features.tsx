@@ -92,8 +92,8 @@ export default function Features() {
                   whileHover={{ y: -4 }}
                   className="group cursor-pointer"
                 >
-                  <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-100 hover:border-amber-600 hover:shadow-xl transition-all duration-300 h-full">
-                    <div className="w-14 h-14 bg-black rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-600 transition-colors duration-300">
+                  <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-100 hover:border-amber-700 hover:shadow-xl transition-all duration-300 h-full">
+                    <div className="w-14 h-14 bg-amber-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-700 transition-colors duration-300">
                       <Icon className="text-white text-2xl" />
                     </div>
                     <h3 className="text-xl font-semibold mb-3 text-black">

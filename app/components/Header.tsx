@@ -31,8 +31,8 @@ export default function Header() {
           transition={{ duration: 0.5 }}
           className="text-2xl font-bold tracking-tight"
         >
-          <span className="text-black">Menù</span>
-          <span className="text-amber-600"> Atelier</span>
+          <span className="text-foreground">Menù</span>
+          <span className="text-amber-700"> Atelier</span>
         </motion.div>
 
         {/* Desktop Navigation */}
@@ -63,9 +63,9 @@ export default function Header() {
         </div>
 
         <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="hidden md:block bg-black text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-900 transition-colors"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          className="hidden md:block bg-amber-800 text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-amber-900 transition-colors"
         >
           Consulenza gratuita
         </motion.button>
@@ -109,7 +109,7 @@ export default function Header() {
             >
               FAQ
             </Link>
-            <button className="w-full bg-black text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-900">
+            <button className="w-full bg-amber-800 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-amber-900">
               Consulenza gratuita
             </button>
           </div>

@@ -1,21 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400&display=swap");
 
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --gray-light: #f5f5f5;
-  --gray-mid: #e8e8e8;
-  --gray-dark: #666666;
-  --accent-gold: #c9a961;
-  --accent-copper: #b87333;
+  --background: #fafaf8;
+  --foreground: #1a1a1a;
+  --gray-50: #f8f8f6;
+  --gray-100: #f0f0ed;
+  --gray-200: #e5e5e0;
+  --gray-400: #a9a8a3;
+  --gray-600: #6b6b66;
+  --accent-primary: #8b7a5e;
+  --accent-light: #a8987a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Inter", sans-serif;
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
 }
 
 * {
@@ -31,8 +34,11 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Inter", sans-serif;
-  line-height: 1.6;
+  font-family: "Geist", sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -42,16 +48,19 @@ a {
 }
 
 button {
-  font-family: "Inter", sans-serif;
+  font-family: "Geist", sans-serif;
   transition: all 0.3s ease;
+  letter-spacing: 0.3px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0f0f0f;
-    --foreground: #ffffff;
-    --gray-light: #2a2a2a;
-    --gray-mid: #1a1a1a;
-    --gray-dark: #999999;
+    --background: #0d0d0b;
+    --foreground: #f5f5f3;
+    --gray-50: #1a1a18;
+    --gray-100: #2a2a26;
+    --gray-200: #3a3a35;
+    --gray-400: #808078;
+    --gray-600: #b0b0a8;
   }
 }

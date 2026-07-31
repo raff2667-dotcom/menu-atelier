@@ -40,15 +40,15 @@ export default function Hero() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
+            className="text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground"
           >
             Il tuo menù,{" "}
-            <span className="text-amber-600">progettato come un'esperienza</span>
+            <span className="text-amber-700">progettato come un'esperienza</span>
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-600 leading-relaxed max-w-xl"
+            className="text-lg text-gray-600 leading-relaxed max-w-xl font-light"
           >
             Non realizziamo semplici menù digitali. Progettiamo strumenti di
             vendita che valorizzano il tuo locale, migliorano l'esperienza dei
@@ -61,17 +61,17 @@ export default function Hero() {
           >
             <motion.button
               onClick={() => setIsModalOpen(true)}
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0,0,0,0.15)" }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-black text-white px-8 py-3.5 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-900 transition-colors"
+              whileHover={{ scale: 1.02, boxShadow: "0 12px 20px -5px rgba(0,0,0,0.1)" }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-amber-800 text-white px-8 py-3.5 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-amber-900 transition-colors"
             >
               Richiedi una consulenza gratuita
               <FaArrowRight size={18} />
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-black text-black px-8 py-3.5 rounded-lg font-semibold hover:bg-black hover:text-white transition-colors"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="border-2 border-amber-800 text-amber-800 px-8 py-3.5 rounded-lg font-medium hover:bg-amber-800 hover:text-white transition-colors"
             >
               Guarda un esempio
             </motion.button>
@@ -86,9 +86,9 @@ export default function Hero() {
           className="flex justify-center items-center"
         >
           <motion.div
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-            className="relative w-72 h-96 bg-gradient-to-br from-gray-900 to-black rounded-3xl shadow-2xl border-8 border-gray-800 overflow-hidden"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            className="relative w-72 h-96 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-xl border-8 border-gray-700 overflow-hidden"
           >
             {/* Phone Notch */}
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-black rounded-b-3xl z-10" />

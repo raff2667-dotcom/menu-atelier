@@ -42,7 +42,7 @@ export default function Footer() {
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold mb-2">
                 <span className="text-white">Menù</span>
-                <span className="text-amber-600"> Atelier</span>
+                <span className="text-amber-400"> Atelier</span>
               </h3>
               <p className="text-gray-400 text-sm">
                 Progettiamo menù digitali che valorizzano il tuo locale.
