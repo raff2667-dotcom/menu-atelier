@@ -29,7 +29,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen pt-48 pb-20 px-8" style={{ backgroundColor: "#f0e6db" }}>
+    <section className="min-h-screen pt-48 pb-20 px-16" style={{ backgroundColor: "#f0e6db" }}>
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div
