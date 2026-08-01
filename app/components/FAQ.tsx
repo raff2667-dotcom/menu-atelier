@@ -56,7 +56,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-28 px-16" style={{ backgroundColor: "#f0e6db" }}>
+    <section id="faq" className="py-28 pr-6" style={{ paddingLeft: "50px", backgroundColor: "#f0e6db" }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"

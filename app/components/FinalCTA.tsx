@@ -29,7 +29,7 @@ export default function FinalCTA() {
   };
 
   return (
-    <section className="py-32 px-16 text-white" style={{ backgroundColor: "#1e3a7f" }}>
+    <section className="py-32 pr-6 text-white" style={{ paddingLeft: "50px", backgroundColor: "#1e3a7f" }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"

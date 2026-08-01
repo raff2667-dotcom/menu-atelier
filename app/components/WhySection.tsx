@@ -24,7 +24,7 @@ export default function WhySection() {
   };
 
   return (
-    <section id="perche" className="py-24 px-16" style={{ backgroundColor: "#f0e6db" }}>
+    <section id="perche" className="py-24 pr-6" style={{ backgroundColor: "#f0e6db", paddingLeft: "50px" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"

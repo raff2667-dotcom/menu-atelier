@@ -37,7 +37,7 @@ export default function Consultation() {
   };
 
   return (
-    <section className="py-28 px-16" style={{ backgroundColor: "#ede8df" }}>
+    <section className="py-28 pr-6" style={{ paddingLeft: "50px", backgroundColor: "#ede8df" }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"

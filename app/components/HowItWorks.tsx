@@ -62,7 +62,7 @@ export default function HowItWorks() {
   };
 
   return (
-    <section id="come" className="py-28 px-16" style={{ backgroundColor: "#ede8df" }}>
+    <section id="come" className="py-28 pr-6" style={{ backgroundColor: "#ede8df", paddingLeft: "50px" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
