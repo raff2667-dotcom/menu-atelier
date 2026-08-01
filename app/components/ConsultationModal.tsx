@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaXmark, FaPhone, FaWhatsapp } from "react-icons/fa6";
 
@@ -13,11 +14,18 @@ export default function ConsultationModal({
   isOpen,
   onClose,
 }: ConsultationModalProps) {
+  const [isMounted, setIsMounted] = useState(false);
   const phoneNumber = "+39 351 480 2374";
   const whatsappNumber = "+393514802374";
   const whatsappMessage = "Ciao! Vorrei richiedere una consulenza gratuita per il mio menù digitale.";
 
-  return (
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
+  const modalContent = (
     <AnimatePresence>
       {isOpen && (
         <>
@@ -117,4 +125,6 @@ export default function ConsultationModal({
       )}
     </AnimatePresence>
   );
+
+  return createPortal(modalContent, document.body);
 }
