@@ -13,8 +13,8 @@ export default function ConsultationModal({
   isOpen,
   onClose,
 }: ConsultationModalProps) {
-  const phoneNumber = "+39 123 456 7890";
-  const whatsappNumber = "+39123456789";
+  const phoneNumber = "+39 351 480 2374";
+  const whatsappNumber = "+393514802374";
   const whatsappMessage = "Ciao! Vorrei richiedere una consulenza gratuita per il mio menù digitale.";
 
   return (

@@ -4,10 +4,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaBars, FaXmark } from "react-icons/fa6";
+import ConsultationModal from "./ConsultationModal";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,6 +80,7 @@ export default function Header() {
         </div>
 
         <motion.button
+          onClick={() => setIsModalOpen(true)}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className="hidden md:block px-6 py-2.5 rounded-lg text-sm font-medium transition-colors border-2"
@@ -147,6 +150,10 @@ export default function Header() {
               FAQ
             </Link>
             <button
+              onClick={() => {
+                setIsModalOpen(true);
+                setIsOpen(false);
+              }}
               className="w-full px-4 py-2 rounded-lg text-sm font-medium transition-colors border-2"
               style={{
                 backgroundColor: "#d1d5db",
@@ -161,6 +168,11 @@ export default function Header() {
           </div>
         </motion.div>
       )}
+
+      <ConsultationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </header>
   );
 }
