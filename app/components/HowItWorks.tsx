@@ -39,13 +39,6 @@ export default function HowItWorks() {
       description:
         "Il menù viene pubblicato online. Riceverai il QR Code personalizzato pronto da stampare.",
     },
-    {
-      number: 5,
-      icon: FaRocket,
-      title: "Assistenza continua",
-      description:
-        "Anche dopo la consegna continuiamo a seguirti. Potrai aggiornare il menù quando desideri.",
-    },
   ];
 
   const containerVariants = {
@@ -69,7 +62,7 @@ export default function HowItWorks() {
   };
 
   return (
-    <section id="come" className="py-24 px-6" style={{ backgroundColor: "#ede8df" }}>
+    <section id="come" className="py-28 px-8" style={{ backgroundColor: "#ede8df" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -87,7 +80,7 @@ export default function HowItWorks() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
             {/* Connecting Line */}
             <div className="absolute top-20 left-0 right-0 h-1 bg-gradient-to-r hidden md:block opacity-20" style={{ backgroundImage: "linear-gradient(to right, #1e3a7f, #6b7280, #1e3a7f)" }} />
 

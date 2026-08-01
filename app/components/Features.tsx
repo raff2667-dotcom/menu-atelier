@@ -24,11 +24,6 @@ export default function Features() {
       description: "Ogni locale è diverso. Ogni menù viene realizzato da zero.",
     },
     {
-      icon: Users,
-      title: "Assistenza umana",
-      description: "Parli sempre con persone reali.",
-    },
-    {
       icon: Clock,
       title: "Aggiornamenti semplici",
       description: "Modificare il menù richiede pochi minuti.",
@@ -38,11 +33,6 @@ export default function Features() {
       title: "QR Code personalizzato",
       description:
         "Design coordinato con l'immagine del locale.",
-    },
-    {
-      icon: Headphones,
-      title: "Supporto continuo",
-      description: "Siamo disponibili anche dopo la consegna.",
     },
   ];
 
@@ -67,7 +57,7 @@ export default function Features() {
   };
 
   return (
-    <section className="py-24 px-6" style={{ backgroundColor: "#f0e6db" }}>
+    <section className="py-28 px-8" style={{ backgroundColor: "#f0e6db" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -83,7 +73,7 @@ export default function Features() {
             <span style={{ color: "#4b5563" }}>scegliere noi</span>
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
