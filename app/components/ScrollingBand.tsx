@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 export default function ScrollingBand() {
   const scrollVariants = {
     animate: {
-      x: [0, 1200],
+      x: -1200,
       transition: {
         duration: 20,
         repeat: Infinity,
+        repeatType: "loop" as const,
         ease: "linear",
       },
     },
