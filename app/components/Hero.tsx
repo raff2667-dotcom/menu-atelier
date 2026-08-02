@@ -102,7 +102,7 @@ export default function Hero() {
         {/* Right - QR Code Illustration */}
         <motion.div
           initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0, y: 10 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex justify-center items-center"
         >
