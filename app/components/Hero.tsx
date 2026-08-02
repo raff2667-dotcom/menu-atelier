@@ -29,7 +29,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen pb-20 pr-6" style={{ backgroundColor: "#f0e6db", paddingLeft: "50px", marginBottom: "50px", paddingTop: "212px" }}>
+    <section className="min-h-screen pb-20 pr-6" style={{ backgroundColor: "#f0e6db", paddingLeft: "50px", marginBottom: "50px", paddingTop: "202px" }}>
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div
