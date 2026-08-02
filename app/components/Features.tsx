@@ -57,7 +57,7 @@ export default function Features() {
   };
 
   return (
-    <section className="py-28 pr-6 mb-80" style={{ backgroundColor: "#f0e6db", paddingLeft: "50px" }}>
+    <section className="py-28 pr-6" style={{ backgroundColor: "#f0e6db", paddingLeft: "50px", marginBottom: "50px" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
