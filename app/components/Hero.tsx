@@ -99,45 +99,118 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right - Mockup */}
+        {/* Right - QR Code Illustration */}
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex justify-center items-center"
         >
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="relative w-72 h-96 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-xl border-8 border-gray-700 overflow-hidden"
-          >
-            {/* Phone Notch */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-black rounded-b-3xl z-10" />
+          <svg viewBox="0 0 400 500" className="w-80 h-96" xmlns="http://www.w3.org/2000/svg">
+            {/* QR Code Background */}
+            <motion.g
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
+              {/* QR Code Grid */}
+              <rect x="40" y="40" width="180" height="180" fill="#ffffff" stroke="#1e3a7f" strokeWidth="2" rx="8" />
 
-            {/* Screen Content */}
-            <div className="pt-8 px-6 h-full bg-white overflow-hidden">
-              <div className="text-center mb-6">
-                <div className="w-12 h-12 bg-amber-600 rounded-full mx-auto mb-4" />
-                <h2 className="text-xl font-bold text-black">Ristorante</h2>
-                <p className="text-sm text-gray-600">Menu Digitale</p>
-              </div>
+              {/* QR Pattern - Top Left */}
+              <rect x="55" y="55" width="30" height="30" fill="#1e3a7f" />
+              <rect x="90" y="55" width="20" height="20" fill="#ffffff" stroke="#1e3a7f" strokeWidth="1" />
+              <rect x="115" y="55" width="30" height="30" fill="#1e3a7f" />
 
-              <div className="space-y-3">
-                <div className="bg-gray-100 h-16 rounded-lg p-3">
-                  <div className="h-2 bg-gray-300 rounded mb-2" />
-                  <div className="h-1 bg-gray-200 rounded" />
-                </div>
-                <div className="bg-gray-100 h-16 rounded-lg p-3">
-                  <div className="h-2 bg-gray-300 rounded mb-2" />
-                  <div className="h-1 bg-gray-200 rounded" />
-                </div>
-                <div className="bg-gray-100 h-16 rounded-lg p-3">
-                  <div className="h-2 bg-gray-300 rounded mb-2" />
-                  <div className="h-1 bg-gray-200 rounded" />
-                </div>
-              </div>
-            </div>
-          </motion.div>
+              <rect x="55" y="90" width="20" height="20" fill="#ffffff" stroke="#1e3a7f" strokeWidth="1" />
+              <rect x="80" y="90" width="20" height="20" fill="#1e3a7f" />
+              <rect x="105" y="90" width="20" height="20" fill="#1e3a7f" />
+              <rect x="130" y="90" width="15" height="15" fill="#ffffff" stroke="#1e3a7f" strokeWidth="1" />
+
+              <rect x="55" y="115" width="30" height="30" fill="#1e3a7f" />
+              <rect x="90" y="115" width="20" height="20" fill="#ffffff" stroke="#1e3a7f" strokeWidth="1" />
+              <rect x="115" y="115" width="30" height="30" fill="#1e3a7f" />
+
+              {/* QR Pattern - Random squares */}
+              <rect x="155" y="60" width="15" height="15" fill="#1e3a7f" />
+              <rect x="175" y="85" width="12" height="12" fill="#1e3a7f" />
+              <rect x="160" y="100" width="18" height="18" fill="#1e3a7f" />
+              <rect x="180" y="125" width="15" height="15" fill="#1e3a7f" />
+              <rect x="70" y="150" width="20" height="20" fill="#1e3a7f" />
+              <rect x="100" y="160" width="18" height="18" fill="#1e3a7f" />
+              <rect x="140" y="145" width="15" height="15" fill="#1e3a7f" />
+              <rect x="165" y="160" width="12" height="12" fill="#1e3a7f" />
+
+              {/* Scan Line Animation */}
+              <motion.line
+                x1="50" y1="50" x2="210" y2="50"
+                stroke="#4b5563"
+                strokeWidth="3"
+                opacity="0.6"
+                animate={{ y: [0, 160, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              />
+            </motion.g>
+
+            {/* Smartphone */}
+            <motion.g
+              animate={{ rotate: [-8, 8, -8] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              style={{ transformOrigin: "280px 350px" }}
+            >
+              {/* Phone Body */}
+              <rect x="240" y="220" width="80" height="150" rx="8" fill="#2d3748" stroke="#1e3a7f" strokeWidth="2" />
+
+              {/* Notch */}
+              <rect x="265" y="225" width="30" height="8" rx="4" fill="#000000" />
+
+              {/* Screen */}
+              <rect x="248" y="240" width="64" height="120" rx="4" fill="#ffffff" />
+
+              {/* Screen Content - Menu Items */}
+              <rect x="252" y="248" width="56" height="8" rx="2" fill="#f0e6db" />
+              <rect x="252" y="260" width="40" height="3" rx="1" fill="#d1d5db" />
+              <rect x="252" y="266" width="35" height="3" rx="1" fill="#d1d5db" />
+
+              <rect x="252" y="280" width="56" height="8" rx="2" fill="#f0e6db" />
+              <rect x="252" y="292" width="42" height="3" rx="1" fill="#d1d5db" />
+              <rect x="252" y="298" width="38" height="3" rx="1" fill="#d1d5db" />
+
+              <rect x="252" y="312" width="56" height="8" rx="2" fill="#f0e6db" />
+              <rect x="252" y="324" width="44" height="3" rx="1" fill="#d1d5db" />
+              <rect x="252" y="330" width="36" height="3" rx="1" fill="#d1d5db" />
+
+              {/* Camera */}
+              <circle cx="280" cy="350" r="4" fill="#4b5563" />
+            </motion.g>
+
+            {/* Connecting Lines */}
+            <motion.g
+              opacity={0}
+              animate={{ opacity: [0, 0.6, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <line x1="220" y1="130" x2="240" y2="250" stroke="#1e3a7f" strokeWidth="2" strokeDasharray="5,5" />
+              <line x1="220" y1="130" x2="280" y2="220" stroke="#1e3a7f" strokeWidth="2" strokeDasharray="5,5" />
+            </motion.g>
+
+            {/* Checkmark - Success */}
+            <motion.g
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: [0, 1.2, 1], opacity: [0, 1, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 1.5 }}
+              style={{ transformOrigin: "310px 180px" }}
+            >
+              <circle cx="310" cy="180" r="20" fill="none" stroke="#1e3a7f" strokeWidth="2" />
+              <path d="M 305 180 L 310 185 L 318 173" stroke="#1e3a7f" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+            </motion.g>
+
+            {/* Label */}
+            <text x="200" y="420" textAnchor="middle" fontSize="18" fontWeight="600" fill="#1e3a7f">
+              Scansiona e Ordina
+            </text>
+            <text x="200" y="450" textAnchor="middle" fontSize="14" fill="#4b5563">
+              Menù Digitale in Tempo Reale
+            </text>
+          </svg>
         </motion.div>
       </div>
 
