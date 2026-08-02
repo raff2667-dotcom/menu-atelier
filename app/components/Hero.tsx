@@ -58,7 +58,7 @@ export default function Hero() {
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 pt-6"
+            className="flex justify-center pt-6"
           >
             <motion.button
               onClick={() => setIsModalOpen(true)}
@@ -75,26 +75,6 @@ export default function Hero() {
             >
               Richiedi una consulenza gratuita
               <FaArrowRight size={18} />
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="border-2 px-8 py-3.5 rounded-lg font-medium transition-colors"
-              style={{
-                borderColor: "#1e3a7f",
-                color: "#1e3a7f",
-                backgroundColor: "transparent"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#1e3a7f";
-                e.currentTarget.style.color = "white";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "transparent";
-                e.currentTarget.style.color = "#1e3a7f";
-              }}
-            >
-              Guarda un esempio
             </motion.button>
           </motion.div>
         </motion.div>
