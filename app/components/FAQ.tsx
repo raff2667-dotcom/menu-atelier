@@ -11,12 +11,7 @@ export default function FAQ() {
     {
       question: "Quanto tempo serve per realizzare il menù?",
       answer:
-        "Di solito, dalla consulenza gratuita alla consegna del menù digitale passano 2-3 settimane, a seconda della complessità del progetto e della velocità di feedback. Tempi brevi per progetti standard, tempi più lunghi per progettazioni particolarmente elaborate.",
-    },
-    {
-      question: "Posso modificare il menù dopo la consegna?",
-      answer:
-        "Sì, assolutamente. Uno dei nostri principali vantaggi è la facilità di modifica. Puoi aggiornare il menù in qualsiasi momento, modificare prezzi, aggiungere piatti stagionali o cambiar completamente il design. Siamo qui per supportarti.",
+        "Di solito, dalla consulenza gratuita alla consegna del menù digitale passano 5-7 giorni, a seconda della complessità del progetto e della velocità di feedback. Tempi brevi per progetti standard, tempi più lunghi per progettazioni particolarmente elaborate.",
     },
     {
       question: "Il QR Code è incluso nel servizio?",
