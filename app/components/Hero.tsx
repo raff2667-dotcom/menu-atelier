@@ -24,7 +24,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.8, ease: "easeOut" as const },
     },
   };
 
@@ -90,7 +90,7 @@ export default function Hero() {
             {/* QR Code Background */}
             <motion.g
               animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as const }}
             >
               {/* QR Code Grid */}
               <rect x="40" y="40" width="180" height="180" fill="#ffffff" stroke="#1e3a7f" strokeWidth="2" rx="8" />
@@ -126,14 +126,14 @@ export default function Hero() {
                 strokeWidth="3"
                 opacity="0.6"
                 animate={{ y: [0, 160, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" as const }}
               />
             </motion.g>
 
             {/* Smartphone */}
             <motion.g
               animate={{ rotate: [-8, 8, -8] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" as const }}
               style={{ transformOrigin: "280px 350px" }}
             >
               {/* Phone Body */}
